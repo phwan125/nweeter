@@ -33,7 +33,6 @@ const Home = ({ userObj }) => {
 
   }, [])
 
-
   return (
     <div>
       <NweetFactory userObj={userObj} />

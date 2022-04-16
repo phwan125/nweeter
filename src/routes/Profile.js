@@ -23,7 +23,6 @@ const Profile = ({ userObj, refreshUser }) => {
       // console.log(doc.id, "=> ", doc.data())
       setMyNweets(prev => [doc.data(), ...prev])
     })
-    setMyNweets(querySnapshot)
   }
   useEffect(() => {
     getMyNweets()
@@ -49,7 +48,7 @@ const Profile = ({ userObj, refreshUser }) => {
     </form>
     <button onClick={onLogOutClick}>Log Out</button>
     <div>
-      {/* {myNweets.map((doc) => <MyNweets myNweetObj={doc} key={doc.createdAt} />)} */}
+      {myNweets && myNweets.map((doc) => <MyNweets myNweetObj={doc} key={doc.createdAt} />)}
     </div>
   </>)
 }
