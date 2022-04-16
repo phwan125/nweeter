@@ -40,7 +40,8 @@ const Profile = ({ userObj, refreshUser }) => {
     }
 
   }
-  console.log(myNweets)
+  console.log(myNweets, "my")
+  console.log("my")
 
   return (<>
     <form onSubmit={onSubmit}>
